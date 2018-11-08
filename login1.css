@@ -1,0 +1,42 @@
+body{
+    background-color:darkgray;
+    width: 100%;
+    font-family: arial, sans-serif;
+    line-height:1.5;
+    margin: 0;
+}
+
+.content {
+    max-width: 100%;
+    padding: 10px 20px;
+}
+
+.textField{
+    width: 250px;
+    height: 30px;
+    padding-left: 5px;
+    border: 2px solid #2e3c45;
+}
+
+.button{
+    text-decoration: none;
+    background-color: darkgray;
+    color:  #2e3c45;
+    border: 2px solid #2e3c45;
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+    clear: both;
+}
+
+.error-message{
+    color: red;
+    font-style: italic;
+}
+
