@@ -41,28 +41,32 @@
     <body>
         <div id="background">
             <h1 class="title">REGISTER</h1>
-            <div class="error-message">
+
+            <form class="form" method="post" action="register.php">
+                <input type="text" name="firstName" placeholder="First name" class="text-field" value="<?php //echo($_POST['firstName']); ?>"><br><br>
+
+                <input type="text" name="lastName" placeholder="Last name" class="text-field" value="<?php //echo($_POST['lastName']); ?>"><br><br>
+
+                <input type="text" name="username" placeholder="Username" class="text-field" value="<?php //echo($_POST['username']); ?>"><br><br>
+
+                <input type="email" name="email" placeholder="E-mail" class="text-field" value="<?php //echo($_POST['email']); ?>"><br><br>
+                
+                <input type="password" name="password" placeholder="Password" class="text-field"><br><br>
+
+                <input type="password" name="passwordRepeat" placeholder="Repeat your password" class="text-field"><br><br>
+
+                <input type="submit" value="REGISTER" name="register_btn" class="button">
+            </form>
+
+            <p class="error-message">
                 <?php
                     if(isset($message))
                     {
                         print $message;
                     }
                 ?>
-            </form>
-            <form method="post" action="register.php">
-                <input type="text" name="firstName" placeholder="First name" class="textField" value="<?php //echo($_POST['firstName']); ?>"><br><br>
+            </p>
 
-                <input type="text" name="lastName" placeholder="Last name" class="textField" value="<?php //echo($_POST['lastName']); ?>"><br><br>
-
-                <input type="text" name="username" placeholder="Username" class="textField" value="<?php //echo($_POST['username']); ?>"><br><br>
-
-                <input type="email" name="email" placeholder="E-mail" class="textField" value="<?php //echo($_POST['email']); ?>"><br><br>
-                
-                <input type="password" name="password" placeholder="Password" class="textField"><br><br>
-
-                <input type="password" name="passwordRepeat" placeholder="Repeat your password" class="textField"><br><br>
-
-                <input type="submit" value="REGISTER" name="register_btn" class="button">
-            </form>
+        </div>
     </body>
 </html>

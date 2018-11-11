@@ -45,24 +45,26 @@
     <body>
         <div class="content">
             <h1 class="title">LOGIN</h1>
-            <img src="img/loginicon.png" class="loginImg">
-            <div class="error-message">
+            <img src="img/loginicon.png" class="login-img">
+                       
+            <form method="post" action="login.php">
+                <input type="username" name="username" placeholder="Username" class="text-field">
+
+                <input type="password" name="password" placeholder="Password" class="text-field">
+
+                <input type="submit" value="LOGIN" name="login_btn" class="button">
+                
+                <input type="button" value="REGISTER" onclick="window.location.href='register.php'" class="button">
+            </form>
+
+            <p class="error-message">
                 <?php
                     if(isset($message))
                     {
                         echo $message;
                     }
                 ?>
-            </div>             
-            <form method="post" action="login.php">
-                <input type="username" name="username" placeholder="Username" class="textField"><br><br>
-
-                <input type="password" name="password" placeholder="Password" class="textField"><br><br>
-
-                <input type="submit" value="LOGIN" name="login_btn" class="button">
-                
-                <a href="register.php" class="button">REGISTER</a>
-            </form> 
+            </p>  
         </div>
     </body>
 </html>
